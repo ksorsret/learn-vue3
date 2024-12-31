@@ -36,8 +36,9 @@
 </template>
 
 <script>
-import { mapActions, mapGetters, mapState } from 'vuex';
+import { createNamespacedHelpers } from 'vuex';
 import Modal from '../Modal/Modal.vue';
+const {mapActions, mapState, mapGetters} = createNamespacedHelpers('user'); // module user để lấy các action, state,...
 
 export default {
   data() {
@@ -61,12 +62,12 @@ export default {
   computed: {
     //lấy dữ liệu từ vuex
     ...mapState({
-      users: (state) => state.users //state là state trên vuex
+      users: (state) => state.users //state là state trên vuex, có sử dụng module namespaced
     }),
     //lấy dữ liệu đã lọc từ trên store
     ...mapGetters({
-      userByBoy: 'userByBoy',
-      userBySearch: 'userBySearch',
+      userByBoy: 'userByBoy', //user là tên module
+      userBySearch: 'userBySearch', //user là tên module
     }),
     //tự tạo trong componnet
     fullName() {
@@ -75,9 +76,9 @@ export default {
   },
   methods: {
     ...mapActions({
-      handleSearch: 'fetchUsers',
-      handleAddUser: 'addUserAction',
-      handleRemove: 'deleteUserAction' // tên method gọi ở  @click="handleRemove(item)"
+      // handleSearch: 'fetchUsers',
+      handleAddUser: 'addUserAction', //user/addUserAction(ko nên viết) là tên module
+      handleRemove: 'deleteUserAction' //user là tên module
     }),
   }
 }

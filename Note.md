@@ -401,4 +401,7 @@ Bài 22,23,24,25: Chức năng add user
 - action -> mitation update state
 - lấy state từ store để show list mới
 ======
-Bài 26: 
+Bài 32: namespacedmodule trong vuex
+- state, getter, mutation, action
+======
+Bài 33: 
