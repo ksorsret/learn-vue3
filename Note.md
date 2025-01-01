@@ -404,4 +404,74 @@ Bài 22,23,24,25: Chức năng add user
 Bài 32: namespacedmodule trong vuex
 - state, getter, mutation, action
 ======
-Bài 33: 
+Bài 33: Lifecycle trong Vuex
+
+======
+Bài 34: Create lifecycle
+- Sau khi khởi tạo sự kiện và lifecycle thì beforeCreate
+- Sau đó sẽ khởi tạo reactivity(data, method, computed,...) chạy created
+- VD: nếu log data ở beforeCreate kết quả sẽ là undefined
+=> call API
+======
+Bài 35: Mount lifecycle
+- để selet 1 phần tử ví dụ như input chẳng hạn dùng ref
+- log ref ở beforeMount thì sẽ là undefined
+=> mounted thì mới DOM đc
+======
+Bài 36: Update lifecycle
+- Khi dataa thay đổi sẽ chạy
+=> State thay đổi
+======
+Bài 37: Unmount lifecycle
+- Khi componennt unmout thì sẽ chạy
+- VD: 1 component có dùng setinterval thì lúc BeforeUnmount sẽ phải clearinterval đi để tăng performance
+=> Component rời DOM
+======
+Bài 38: MockAPI
+- Sẽ gọi API ở chỗ actions, created sẽ dispatch action đó
+======
+Bài 39: Nguyên tắc thiet kế  API
+- REST API
+- Ví dụ API Movie
+  + https://domain.com/api/movies -> GET -> Lấy bộ phim
+  + https://domain.com/api/movies/:id -> GET -> Lấy  1 bộ
+  + https://domain.com/api/movies -> POST -> Lưu phim
+  + https://domain.com/api/movies/:id -> PUT -> Cập nhật
+  + https://domain.com/api/movies/:id -> DELETE -> Xóa cmn phim
+
+/-----/-----/-----/
+Cheapter 4: Vue Router
+Bài 1: Giới thiệu Vue Router
+- Chuyển trang mà ko load lại trang web
+- 
+=====
+Bài 2: Cài vue router
+- 
+=====
+Bài 3: Setupvuerouter
+- Tạo page
+- Tạo tuyến đường
+- Tạo router instance
+=> dùng router view để render page theo path
+=====
+Bài 4: router link
+- tạo ra các thẻ a để chuyển hướng mà ko load trang
+=====
+Bài 5: router active class
+- set up trong createRouter({})
+=====
+Bài 6: setup store
+- 
+=====
+Bài 15: name router
+=====
+Bài 16: programmtic navigation
+=====/=====/=====/Cheapter 5=====/=====
+Bài 1: Giới thiệu Composition APIs
+- Vẫn giữ lại cách viết như trong Vue 2.
+- Gom data, computed, methods, watch vào 1 hàm hàm setup
+=====
+Bài 2: this
+- arrow func để binding con trỏ this.
+=====
+Bài 3: 

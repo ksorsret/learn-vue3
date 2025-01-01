@@ -1,7 +1,8 @@
 <script>
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import FormVueX from './components/FormVueX/FormVueX.vue';
+import TheHeader from './components/TheHeader.vue';
+// import FormVueX from './components/FormVueX/FormVueX.vue';
 // import DemoForm from './components/DemoForm.vue';
 // import AppModal from './components/AppModal.vue';
 // import ProductItem from './components/ProductItem.vue';
@@ -11,7 +12,8 @@ import FormVueX from './components/FormVueX/FormVueX.vue';
 
 export default {
   components: {
-    FormVueX
+    TheHeader
+    // FormVueX
     // AppModal,
     // ProductItem,
     // Demo1Slot,
@@ -59,7 +61,9 @@ export default {
       </Teleport>
     </div> -->
     <div class="container">
-      <FormVueX />
+      <!-- <FormVueX /> -->
+      <the-header />
+      <router-view></router-view>
     </div>
   </div>
 </template>
